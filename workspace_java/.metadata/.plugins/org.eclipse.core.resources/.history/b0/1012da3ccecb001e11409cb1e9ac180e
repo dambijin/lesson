@@ -1,0 +1,9 @@
+package coffee;
+
+public class CoffeeExam {
+
+	public static void main(String[] args) {
+
+	}
+
+}

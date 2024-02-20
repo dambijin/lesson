@@ -1,0 +1,27 @@
+package exam3;
+
+import java.util.ArrayList;
+
+public class Member {
+	String id; 		// 아이디
+	String name;	// 회원명
+
+	ArrayList list = new ArrayList();	// 장바구니
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+}

@@ -1,0 +1,16 @@
+package login;
+
+public class LoginExam {
+
+	public static void main(String[] args) {
+		
+
+		String id = "admin";
+		String password = "1234";
+		Login user1= new Login(id ,password);
+		
+		user1.doLogin();
+		
+	}
+
+}

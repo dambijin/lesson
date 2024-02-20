@@ -1,0 +1,10 @@
+package login;
+
+public class LoginNaver extends Login{
+
+	LoginNaver(String id, String pw) {
+		super(id, pw);
+		
+	}
+
+}

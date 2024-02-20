@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단</title>
+</head>
+<style>
+    div {
+        border: 1px solid;
+        padding: 20px;
+        text-align: center;
+        background-color: rgb(209, 197, 197);
+    }
+
+    .div_1 {
+        background-color: rgb(255, 255, 255);
+    }
+
+    /* input 요소가 사용 가능한 상태일 때*/
+    input:enabled+span {
+        color: blue;
+    }
+
+    /* input 요소가 사용 불가능한 상태일 때*/
+    input:disabled+span {
+        color: gray;
+        text-decoration: line-through;
+    }
+
+    /* input 요소가 체크 상태일 때*/
+    input:checked+span {
+        color: red;
+    }
+</style>
+<script>
+</script>
+
+<body>
+    <div>
+        margin
+        <div class="div_1">
+            border
+            <div>padding
+                <div class="div_1">content</div>
+            </div>
+        </div>
+    </div>
+
+
+    <summary>summary</summary>
+    <caption>caption</caption>
+    <table style="border:1px solid red; width:500px;">
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>주소</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>민수</td>
+                <td>수원</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <a href="tel:01024067051">민수</a>
+    <br><br>
+
+    <input type="checkbox" name="weather" checked="checked"><span>흐림</span>
+    <input type="checkbox" name="weather"><span>맑음</span>
+    <input type="checkbox" name="weather" disabled><span>비</span>
+
+
+</body>
+
+</html>

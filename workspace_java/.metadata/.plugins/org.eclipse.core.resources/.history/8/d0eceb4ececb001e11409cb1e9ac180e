@@ -1,0 +1,20 @@
+package coffee;
+
+public class Mega extends Coffee{
+
+	
+	Mega(int price) {
+		super(price);
+	}
+
+	@Override
+	void pay(int money) {
+		if (price<money) {
+			System.out.println("메가커퓌 : 꺼져");
+		}else {
+			System.out.println("메가커퓌 : 아주좋아 커피머겅");
+		}
+	}
+	
+	
+}

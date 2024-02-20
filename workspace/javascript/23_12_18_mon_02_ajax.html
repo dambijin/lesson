@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script>
+
+
+        function doAjax() {
+            // ajax 객체 생성
+            let xhr = new XMLHttpRequest();
+            // 보낼준비
+            xhr.open("get", "https://poiemaweb.com/jquery-ajax-json");
+            // 보내기 (단! 언제 끝날지 모름)
+            xhr.send();
+            // 다녀온 후 (응답 이후)
+            xhr.onload = function () {
+                // 받아온 내용이 저장되는 곳
+                // responseText 프로퍼티는 서버에 요청하여 응답으로 받은 데이터를 문자열로 반환
+                let data = xhr.responseText;
+                console.log(data);
+                // 돔을 분석하는 녀석
+                let parser = new DOMParser();
+                // 'text/html' ; mime이라고 불림
+                // 텍스트이긴 한데 html이라고 알려주는 것 
+                let doc = parser.parseFromString(data, 'text/html');
+                console.log(doc);
+                // doc.querySelector("#1-introduction").innerHTML; 이거못씀 ㅠ
+                console.log(doc.getElementById("1-introduction").innerHTML);
+            }
+        }
+        window.addEventListener("load", function () {
+            document.addEventListener("click", function () {
+                doAjax();
+            })
+
+            $("#btn2").off("click").on("click", function () {
+                let option = {
+                    // url 은 필수 값 / 어디로 가야할지 알려줘야하기 때문
+                    "url": "https://jsonplaceholder.typicode.com/users",
+                    "type": "get",
+                    "success": function (data) {
+                        // 다녀오는걸 성공 했을 때 
+                        console.log("방법1");
+                        console.log(data);
+                    },
+                    "error": function (data) {
+                        // 다녀오는걸 실패 했을 때
+                        console.error("ERRIR", data)
+                    },
+                    "complete": function (data) {
+                        // 성공여부에 관계없이 무조건 마지막에 실행
+                        console.log("complete", data);
+                    }
+                }
+
+                $.ajax(option);
+            });
+
+            debugger;
+
+            $("#btn3").off("click").on("click", function () {
+                let option = {
+                    "url": "https://jsonplaceholder.typicode.com/users",
+                    "type": "get"
+                }
+                // chain방식 연결연결연결 되었다는 의미
+                //$.ajax(option).done().fail().always()
+                $.ajax(option)
+                    .done(function (data) {
+                        // 다녀오는걸 성공 했을 때 
+                        console.log("방법1");
+                        console.log(data);
+                    })
+                    .fail(function (data) {
+                        // 다녀오는걸 실패 했을 때
+                        console.error("ERRIR", data)
+                    })
+                    .always(function (data) {
+                        // 성공여부에 관계없이 무조건 마지막에 실행
+                        console.log("complete", data);
+                    })
+            });
+        });
+
+
+        // 제이슨 객체
+        // 제이슨은 여러 정보를 획기적으로 줄임
+        // json 선언만 하는 방법
+        let json = {};
+
+        // json 선언과 동시에 초기화
+        // 키 값은 스트링만 가능
+        // 키값 : 밸류 로 구성
+        // ,로 다음값을 구분
+
+        json = {
+            "k": "v",
+            "k2": "v2",
+            // 자바스크립트는 키값을 이렇게 표현도 가능하지만 다른곳에선 다 쌍따옴표가 필요함
+            // 이왕이면 쌍따옴표 감싸는걸 연습하는게 좋다
+            k3: "v3",
+            "k4": {
+                "k4_1": "v4"
+            }
+        }
+
+
+        // json 보는법 
+        console.log(json);
+        // json 문자로 바꾸는법 >>결과물은 object로 나옴 자바스크립트가 object로 관리한다는 것 
+        console.log('' + json);
+        // 꺼내는 법
+        console.log('json.k : ', json.k); // >> v
+        // 아래 방법도 있지만 적을 내용이 많아지기에 주로 위에 방법으로 사용
+        // 이런 방법도 있으니 알아두기
+        console.log('json.["k"] : ', json["k"]);
+        console.log('json.k3 : ', json.k3); // >> v3
+
+        // 위에 있는 k4는 키값이고 아래는 변수일뿐 같은게 아니다.
+        let k4 = json.k4;
+        console.log(k4.k4_1);
+        console.log("json.k4.k4_1 : ", json.k4.k4_1);
+        console.log("json.k4.k4_1 : ", json["k4"]["k4_1"]);
+
+        // json을 문자열로 변환
+        let strJson = JSON.stringify(json);
+        console.log("stringify : ", strJson);
+
+        // json 문법으로 적힌 문자열을 json 형태로 바꾸는 법
+        let json2 = JSON.parse(strJson);
+        console.log(json2);
+
+
+    </script>
+</head>
+
+<body>
+    <button type="button" id="btn">다녀오기</button>
+    <br>
+    <button type="button" id="btn2">jQuery ajax 방법1</button>
+    <br>
+    <button type="button" id="btn3">jQuery ajax 방법2</button>
+
+</body>
+
+</html>

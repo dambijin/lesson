@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>적극적인 의사 표현 - 집계용</title>
+    <style>
+        h1 {
+           text-align: center; 
+        }
+        #vote {
+            height: 200px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-bottom: 40px;
+            padding: 0 30px;
+
+            text-align: center;
+            font-size: 40px;
+
+        }
+        #vote .btn {
+            width: 150px;
+            height: 150px;
+            line-height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        #btn_vote_1 {
+            background-image: url("./assets/image/positive.webp");
+            background-position: center center;
+            background-size: 50%;
+            background-repeat: no-repeat;
+        }
+        #btn_vote_2 {
+            background-image: url("./assets/image/normal.webp");
+            background-position: center center;
+            background-size: 50%;
+            background-repeat: no-repeat;
+        }
+        #btn_vote_3 {
+            background-image: url("./assets/image/negative.png");
+            background-position: center center;
+            background-size: 50%;
+            background-repeat: no-repeat;
+        }
+
+        .total {
+            text-align: right;
+            padding-right: 20px;
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        #btn_speed_1 {
+            background-color: #006b3ebb;
+            color: #ffffff;
+        }
+        #btn_speed_2 {
+            background-color: #ffaa1cbb;
+        }
+        #btn_speed_3 {
+            background-color: #ed2938bb;
+            color: #ffffff;
+        }
+
+        #speed {
+            height: 100px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-bottom: 40px;
+            padding: 0 30px;
+            text-align: center;
+        }
+        #speed .btn {
+            width: 100px;
+            height: 75px;
+            line-height: 75px;
+            border-radius: 10%;
+
+            /*cursor: pointer;*/
+        }
+
+        #write, #vote_make {
+            box-sizing: border-box;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 0 30px;
+        }
+        #write textarea {
+            width: 100%;
+            height: 100%;
+        }
+        #write .btn_write{
+            text-align: right;
+            margin-bottom: 10px;
+        }
+
+        #write #opinion {
+            background-color: #ffaa1cbb;
+            padding: 10px;
+        }
+        #write #opinion .article {
+            margin: 10px 0;
+            border-bottom: 1px black dotted;
+            display: flex;
+        }
+
+        .result {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+        }
+
+        .time {
+            margin-right: 10px;
+            font-size: 12px;
+            color: white;
+            background-color: #69a850;
+            width: 100px;
+            padding: 2px;
+        }
+        .msg {
+            flex-grow: 1;
+            word-break: break-all;
+        }
+        img, iframe {
+            max-width: 100%;
+        }
+        
+        .vote {
+            display: none;
+        }
+        
+        .vote ul {
+            padding: 0;
+        }
+        .vote ul li {
+            list-style: none;
+            width: 40%;
+            margin: 10px 0;
+            border: 1px dotted green;
+            transition: width 0.5s
+        }
+        .vote ul li .voteList.voteCnt {
+            display: inline-block;
+            line-height: 16px;
+            color: white;
+            background-color: #69a850;
+            width: 20px;
+            padding: 0 5px;
+            margin-left: 5px;
+            text-align: center;
+        }
+        .vote ul li .val {
+            padding-left: 20px;
+        }
+        
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/vote_result.js"></script>
+</head>
+<body>
+    <h1>적극적인 의사 표현 - 집계용</h1>
+    <!-- 투표 버튼 -->
+    <div id="vote">
+        <div>
+            <div id="btn_vote_1" class="btn"></div>
+            <div id="btn_vote_1_count" class="btn_vote" data-value="1">0</div>
+        </div>
+        <div>
+            <div id="btn_vote_2" class="btn"></div>
+            <div id="btn_vote_2_count" class="btn_vote" data-value="2">0</div>
+        </div>
+        <div>
+            <div id="btn_vote_3" class="btn"></div>
+            <div id="btn_vote_3_count" class="btn_vote" data-value="3">0</div>
+        </div>
+    </div>
+    <div class="result">
+        <div class="total">합계 : <span id="count_total">0</span> / 20</div>
+        <div>
+            <button id="init_count" type="button">초기화</button>
+        </div>
+    </div>
+
+    <!-- 진행 속도 조절 버튼 -->
+    <div id="speed">
+        <div>
+            <div id="btn_speed_1" class="btn">다시한번</div>
+            <div id="btn_speed_1_count">0</div>
+        </div>
+        <div>
+            <div id="btn_speed_2" class="btn">천천히</div>
+            <div id="btn_speed_2_count">0</div>
+        </div>
+        <div>
+            <div id="btn_speed_3" class="btn">정지</div>
+            <div id="btn_speed_3_count">0</div>
+        </div>
+    </div>
+    
+    <div id="vote_make" class="vote">
+        <input type="text" id="vote_input" placeholder="투표 항목">
+        <button id="vote_add" type="button">추가</button>
+        <button id="vote_send" type="button">투표받기</button>
+        <div id="vote_list">
+            <ul></ul>
+        </div>
+    </div>
+    
+    <!-- 글쓰기 -->
+    <div id="write">
+        <div class="btn_write">
+            <button id="vote_view" type="button">투표 만들기</button>
+            <button id="remove_txt" type="button">글 지우기</button>
+        </div>
+        <div id="opinion">
+        </div>
+    </div>
+</body>
+</html>

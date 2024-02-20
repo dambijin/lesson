@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json공부</title>
+    <script>
+        let url = "https://jsonplaceholder.typicode.com/users"
+
+
+        let xhr = new XMLHttpRequest();
+        xhr.open("get", url);
+        xhr.send();
+        xhr.onload = function () {
+            let data = xhr.responseText;
+            console.log(data);
+
+            let json=JSON.parse(data);
+            console.log(json);
+            console.log(json[2]);
+            let bauch=json[2];
+            console.log(bauch.name);
+            console.log(bauch.address.street);
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

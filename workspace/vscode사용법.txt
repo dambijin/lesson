@@ -1,0 +1,3 @@
+vscode사용법
+
+맨왼쪽 아래에 Extecstions(Ctrl+Shift+X) 클릭 > Live server 검색후 install

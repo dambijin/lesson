@@ -1,0 +1,13 @@
+package login;
+
+public class LoginExam {
+
+	public static void main(String[] args) {
+
+		Login user1= new Login(id,pw);
+		
+		user1.doLogin();
+		
+	}
+
+}

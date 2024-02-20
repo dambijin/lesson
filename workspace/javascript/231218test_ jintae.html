@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품페이지</title>
+    <style>
+        .main {
+            width: 450px;
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+
+        .img_thumb {
+            width: 100px;
+            height: 100px;
+        }
+
+        .img_main {
+            display: inline-block;
+            width: 300px;
+            height: 300px;
+        }
+
+        .prod-image_set {
+            width: 410px;
+            height: 410px;
+        }
+
+        .chk_set {
+            height: 50px;
+        }
+
+        .price {
+            color: red;
+            display: inline-block;
+        }
+
+        .tab-contents {
+            padding: 20px;
+        }
+
+        .tab-title {
+            list-style: none;
+        }
+
+        .tab-title li {
+            float: left;
+            margin-right: 0px;
+            margin-left: 50px;
+            color: blue;
+            border: 1px solid;
+        }
+
+        #main_contents {
+            width: 300px;
+            height: 300px;
+            margin: auto;
+        }
+    </style>
+    <script>
+        // function img_on(url) {
+        //     let imgmain = document.querySelector(".img_main");
+        //     //console.log(url);
+        //     imgmain.innerHTML = `<img src = ${url} style='width:300px; height:300px'>`;
+        // }
+
+        function img_on(img) {
+            let url = img.src;
+            let imgmain = document.querySelector(".img_main");
+            let imgid = img.getAttribute("id");
+            imgmain.innerHTML = `<img src = ${url} style='width:300px; height:300px'>`;
+            let price = document.querySelector(".price");
+            let goods = document.querySelector(".goods");
+            if(imgid=="t_img1")
+            {
+                goods.innerText = "1번 상품입니다."
+                price.innerText = "가격 : " + 9900 + "원";
+                price.setAttribute("value",9900);
+                chk_click();
+            }
+            else if(imgid=="t_img2")
+            {
+                goods.innerText = "2번 상품입니다."
+                price.innerText = "가격 : " + 19800 + "원";
+                price.setAttribute("value",19800);
+                chk_click();
+            }
+            else if(imgid=="t_img3")
+            {
+                goods.innerText = "3번 상품입니다."
+                price.innerText = "가격 : " + 29700 + "원";
+                price.setAttribute("value",29700);
+                chk_click();
+            }
+        }
+
+        function chk_click() {
+            let chks = document.querySelectorAll(".opt:checked");
+            // let val = 9900;
+            let val = Number(document.querySelector(".price").getAttribute("value"));
+            // console.log(chks.length);
+            for (let i = 0; i < chks.length; i++) {
+                val = val + Number(chks[i].value);
+            }
+            document.querySelector(".price").innerText = "가격 : " + val + "원";
+            //체크된 체크박스만 가져오기
+        }
+
+        function show_detail() {
+            document.getElementById("main_contents").innerHTML = `<img src = https://cdn.discordapp.com/attachments/552090544537600003/1186147519089090762/image.png?ex=659230f6&is=657fbbf6&hm=335f6f0ba21ba238918763983f300271ae6de853a23ef058dda18da6774c8674& style='width:300px; height:300px'>`;
+        }
+        function show_review() {
+            document.getElementById("main_contents").innerHTML = `<img src = https://cdn.discordapp.com/attachments/552090544537600003/1186147834727251988/image.png?ex=65923141&is=657fbc41&hm=a0f7de20bf8ca6994fc68d101ae7e0a0e29478f71588f0b4e0a8a4a0a3f9790d& style='width:300px; height:300px'>`;
+
+        }
+        window.onload = function () {
+            document.querySelector(".buy_btn").addEventListener("click", function (event) {
+                let p_text = document.querySelector(".price").textContent.trim();
+                //    console.log(p_text.trim());
+                alert(p_text + "이지만 구매 불가합니다. 감사합니다.")
+            });
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="prod-image_set">
+            <img id="t_img1" class="img_thumb" onmouseover="img_on(this)"
+                src="https://image7.coupangcdn.com/image/vendor_inventory/54ac/4b612aa9d057b1aef98f60bec8c0b49092d266cd6cc98f859b226ecf9ba2.jpg">
+            <img id="t_img2" class="img_thumb" onmouseover="img_on(this)"
+                src="https://image9.coupangcdn.com/image/vendor_inventory/f78f/f6a6a9fd5c52139c864e8543882d49b8ca6f7147553398609ca53ed929bd.jpg">
+            <img id="t_img3" class="img_thumb" onmouseover="img_on(this)" 
+                src="https://image6.coupangcdn.com/image/vendor_inventory/6322/4ddcdcc800a5f24a1861c6505b6ca0e0e8f764a8656f301250a08868f9f9.jpg">
+
+            <div class="img_main">
+                <img src="https://image7.coupangcdn.com/image/vendor_inventory/54ac/4b612aa9d057b1aef98f60bec8c0b49092d266cd6cc98f859b226ecf9ba2.jpg"
+                    style="width:300px; height:300px">
+            </div>
+        </div>
+        <div class="chk_set">
+            <input type="checkbox" class="opt" onclick="chk_click()" value="1000">옵션1(+1000원)
+            <input type="checkbox" class="opt" onclick="chk_click()" value="2000">옵션2(+2000원)
+            <input type="checkbox" class="opt" onclick="chk_click()" value="3000">옵션3(+3000원)
+        </div>
+        <div class="goods">
+            1번 상품입니다.
+        </div>
+        <div class="price" value="9900">
+            가격 : 9900원
+        </div>
+        <input type="button" class="buy_btn" value="구매하기">
+        <div class="tab-contents">
+            <ul class="tab-title">
+                <li class="detail" onclick="show_detail()">상세페이지</li>
+                <li class="review" onclick="show_review()">상품평</li>
+            </ul>
+        </div>
+        <div id="main_contents">
+            <img src=https://cdn.discordapp.com/attachments/552090544537600003/1186147519089090762/image.png?ex=659230f6&is=657fbbf6&hm=335f6f0ba21ba238918763983f300271ae6de853a23ef058dda18da6774c8674&
+                style='width:300px; height:300px'>;
+        </div>
+    </div>
+
+</body>
+
+</html>

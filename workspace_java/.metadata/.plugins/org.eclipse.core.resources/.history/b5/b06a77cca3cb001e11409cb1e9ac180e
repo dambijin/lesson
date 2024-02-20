@@ -1,0 +1,14 @@
+package exam3;
+
+public class MallExam {
+
+	public static void main(String[] args) {
+
+		
+		Goods g1 =new Goods();
+		Goods g2 =new Goods();
+		
+		
+	}
+
+}

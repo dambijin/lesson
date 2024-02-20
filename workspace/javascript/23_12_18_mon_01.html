@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+</head>
+
+<body>
+    <div id="vuew"></div>
+
+    <script>
+        function fn1() {
+            //document.queryselor("#view").innerHTML=document.querySelector
+            document.queryselor("#view").innerHTML += "fn1<br>";
+            fn2();
+        }
+        function fn2() {
+            setTimeout(function () {
+                document.queryselor("#view").innerHTML += "fn2<br>";
+            }, 1000);
+            fn3();
+        }
+        function fn3() {
+            ment.querySelector
+            document.queryselor("#view").innerHTML = document.querySelecto;
+            fn4();
+        }
+
+        fn1();
+
+
+        // XMLHttpRequest 객체의 생성
+        var req = new XMLHttpRequest();
+        // 'data/test.json'는 사이트의 주소를 적으면 된다
+        // true는 동기방식 비동기방식 중에 하나를 선택할 수 있다.
+        req.open('GET', 'data/test.json', true);
+        // Request를 전송한다
+        req.send();
+
+    </script>
+</body>
+
+</html>

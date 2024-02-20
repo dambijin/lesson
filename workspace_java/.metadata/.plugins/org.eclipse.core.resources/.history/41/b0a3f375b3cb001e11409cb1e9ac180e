@@ -1,0 +1,16 @@
+package chap07;
+
+public class Parent {
+
+	String name= "Parent의 name";
+	
+	Parent(){
+		System.out.println("부모 생성자 실행");
+	}
+	
+	String getName() {
+		System.out.println("Parent의 getName 실행");
+		return this.name;
+	}
+	
+}

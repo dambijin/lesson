@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let s1 = 15;
+        let s2 = 20;
+        let s3 = 10;
+        console.log(s1 + s2 + s3);
+
+        let arr2 = new Array();
+        let arr = [];
+        arr = [15, 20, 10]; //배열은 0번부터 시작
+        console.log("arr[0] : ", arr[0]);
+        console.log("arr[2] : ", arr[2]);
+
+        console.log('arr.length : ', arr.length);
+
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            sum = sum + arr[i];
+            console.log("arr[" + i + '] : ', arr[i]);
+        }
+        console.log(sum);
+
+        arr.push("네번째");
+        arr.unshift("첫번째");
+
+        let p = arr.pop();
+        console.log("p : " + p);
+
+        let q = arr.shift();
+        console.log("q :" + q);
+
+        for (let i = 0; i < arr.length; i++) {
+            console.log('arr[' + i + '] : ', arr[i]);
+        }
+
+        arr.push(1);
+        arr.push(2);
+        arr.push(3);
+        arr.push(4);
+
+        //인덱스부터 끝까지 값을 모두 제거
+        let s = arr.splice(3);
+        console.log("s : ", s);
+
+        for (let i = 0; i < arr.length; i++) {
+            console.log('arr[' + i + '] :', arr[i]);
+        }
+
+        arr.push(1);
+        arr.push(2);
+        arr.push(3);
+        arr.push(4);
+
+        //세번째 값 부터 삽입
+        s = arr.splice(3, 2, "new1", "new2")
+        console.log("s :", s);
+
+        for (let i = 0; i < arr.length; i++) {
+            console.log('arr[' + i + ']:', arr[i]);
+        }
+
+
+        console.log("시작 인덱스부터 끝 인덱스 바로 앞까지만 돌려줌");
+        //시작 인덱스부터 끝 인덱스 바로 앞까지만 돌려줌
+        s = arr.slice(0, 4);
+        console.log("s: ", s);
+
+        s = arr.slice(4);
+        console.log("S: ", s);
+
+
+
+        //마이너스 인덱스는 뒤에서부터라는 뜻이다.
+        s = arr.slice(-4);
+        console.log("s:", s);
+
+        console.log("----------------");
+        s = arr.reverse();
+        console.log("s:", s);
+
+        console.log("----------------");
+        //무조건 오름차순만 지원
+        s = arr.sort();
+        console.log("s : ", s);
+
+        //내림차순 지원
+        s = arr.sort()
+        s.reverse()
+        //chain 방식
+        arr.sort().reverse()
+
+        for (let i = 0; i < arr.length; i++) {
+            console.log('arr[' + i + ']:', arr[i]);
+        }
+
+
+        console.log(arr.join("-"))
+        console.log(arr.join())
+
+        //for-in
+        console.log("------------for-in------------");
+        for (let obj in arr) {
+            console.log("for-in obj : ", obj, arr[obj])
+        }
+
+        //for-of
+        console.log("------------for-of----------");
+        for (let obj of arr) {
+            console.log("for-of obj : ", obj, arr[obj])
+        }
+
+
+        let tel = "010-2046-7051"
+        let arrTel = tel.split("-")
+        console.log(arrTel)
+
+
+        let c1 = [1, 2, 3, 4, 5]
+        let c2 = [10, 20, 30, 40]
+        let c3 = [11, 22, 33, 44, 55, 66]
+
+        //2차원 배열
+        let cc = [
+            [1, 2, 3, 4, 5],
+            [10, 20, 30, 40],
+            c3
+        ];
+        console.log(cc[1][2]);//30
+
+        console.log(cc.length);
+
+
+        //큐 Queue
+        //스택 Stack
+
+        
+
+
+
+    </script>
+</head>
+
+<body>
+
+
+</body>
+
+</html>

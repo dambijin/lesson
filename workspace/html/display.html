@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid red;
+        }
+
+        .test1 {
+            width: 200px;
+            display: inline;
+            /*display는 자식요소들을 포함하지 않고 오로지 자기자신만 적용시킨다.
+            inline 영역은 글씨만 자신의 영역이다.*/
+            margin:0 auto;
+        }
+        span{
+            width:100px;
+            height: 100px;
+            margin:20px;
+            padding:20px;
+            /*display:inline-block;
+            display가 어떤 역할을 하는지 볼 수 있음*/
+        }
+        .parent{
+            margin-top: 50px;
+            /*width:150px;*/
+            text-align:center;
+        }
+        .parent>div{
+            border:1px dotted rgb(0,0,255);
+            width:300px;
+            height:150px;
+            line-height: 150px;
+            display:inline-block;
+            vertical-align:top; /*이게 없으면 목록1이랑 설명과 행정렬을 하게 됨*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="test1">
+        discord
+    </div>
+
+    <div class="test1">
+        qwer
+    </div>
+    <br><br>
+    
+    <div>
+        <span>첫번째</span>
+        <span>두번째</span>
+    </div>
+    <div class="parent">
+        <div>
+            목록1
+        </div>
+        <div>
+            목록2<br>설명
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+vscode단축키
+
+
+줄맞춤
+Alt+Shift+F
+
+바로 실행하기(인터넷 창 열림)
+Alt+L+O
+
+한줄 복사
+Alt+Shift+위
+Alt+Shift+아래
+
+한줄 이동
+Alt+방향키(위아래)
+
+주석으로 만들기
+Ctrl+/
+
+맨 위로
+Ctrl+Home
+
+맨 아래로
+Ctrl+End
+
+-----------------------------
+eclipce단축키
+
+console창 
+Ctrl+F11

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jin_css.css" type="text/css">
+    <title>로그인</title>
+</head>
+<style>
+    
+</style>
+
+<body>
+    <div>
+        <div id="thumbnail">
+            <img src="https://cdn.discordapp.com/attachments/1184714459013464135/1186104830066962492/572a2f39d266bba2.jpg?ex=65920934&is=657f9434&hm=3d51f27d7559a6930fbfa56c4b012d4ae404c614e61a1949888a54299c3441a2&"
+                id="sub1" onmouseover="fn_sub1()">
+            <img src="https://cdn.discordapp.com/attachments/820650570028154900/1186114323928592484/image.png?ex=6592120b&is=657f9d0b&hm=bd0ab3c25f3e471dc8508c259c3dbb7b1b6364faac1dce27191afbe871e7343d&"
+                id="sub1" onmouseover="fn_sub2()">
+            <img src="https://cdn.discordapp.com/attachments/820650570028154900/1186114261127287035/image.png?ex=659211fc&is=657f9cfc&hm=b0f6abfb41e5185edfb3f5f4dd0c8b6fdeee2c7bfda9fa2c3992c7fb687a1e70&"
+                id="sub1" onmouseover="fn_sub3()">
+        </div>
+        <div id="img_1">
+            <img src="https://cdn.discordapp.com/attachments/1184714459013464135/1186104830066962492/572a2f39d266bba2.jpg?ex=65920934&is=657f9434&hm=3d51f27d7559a6930fbfa56c4b012d4ae404c614e61a1949888a54299c3441a2&"
+                class="sub2" id="sub2">
+        </div>
+
+        <div id="nayong">
+            
+                <h1 id="product">mengmeng이가 그린 담비</h1>
+                <br>
+                <h2 id="money">1,000,000원</h2>
+            
+            
+            <hr>
+
+            무료배송 <br>
+            구매 후 일주일내 도착 예정
+            <hr>
+            판매자 : 노양심 <br>
+            판매자 평가 : 너무 비싸네용
+            <hr>
+            배송사 : 우체국 택배
+            <br><br><br>
+            <input id="button_1" type="button" value="믕믕이가 그린 담비" onclick="fn_dambi1()">
+            <input id="button_1" type="button" value="귀여운 담비" onclick="fn_dambi2()">
+            <input id="button_1" type="button" value="아름다운 담비" onclick="fn_dambi3()">
+
+        </div>
+    </div>
+    </div>
+    <script>
+        function fn_sub1() {
+            let img_1 = document.getElementById("sub2").setAttribute("src", "https://cdn.discordapp.com/attachments/1184714459013464135/1186104830066962492/572a2f39d266bba2.jpg?ex=65920934&is=657f9434&hm=3d51f27d7559a6930fbfa56c4b012d4ae404c614e61a1949888a54299c3441a2&");
+            console.log(img_1);
+        }
+
+        function fn_sub2() {
+            let img_1 = document.getElementById("sub2").setAttribute("src", "https://cdn.discordapp.com/attachments/820650570028154900/1186114323928592484/image.png?ex=6592120b&is=657f9d0b&hm=bd0ab3c25f3e471dc8508c259c3dbb7b1b6364faac1dce27191afbe871e7343d&");
+            console.log(img_1);
+        }
+
+        function fn_sub3() {
+            let img_1 = document.getElementById("sub2").setAttribute("src", "https://cdn.discordapp.com/attachments/820650570028154900/1186114261127287035/image.png?ex=659211fc&is=657f9cfc&hm=b0f6abfb41e5185edfb3f5f4dd0c8b6fdeee2c7bfda9fa2c3992c7fb687a1e70&");
+            console.log(img_1);
+        }
+
+        let name = document.getElementById("product");
+        console.log(name.innerHTML);
+
+        function fn_dambi1() {
+            let name = document.getElementById("product");
+            let mny = document.getElementById("money");
+            let img_1 = document.getElementById("sub2").setAttribute("src", "https://cdn.discordapp.com/attachments/1184714459013464135/1186104830066962492/572a2f39d266bba2.jpg?ex=65920934&is=657f9434&hm=3d51f27d7559a6930fbfa56c4b012d4ae404c614e61a1949888a54299c3441a2&");
+            console.log(img_1);
+            name.innerHTML = "mengmeng이가 그린 담비"
+            mny.innerHTML = "1,000,000원"
+
+        }
+
+        function fn_dambi2() {
+            let name = document.getElementById("product");
+            let mny = document.getElementById("money");
+            let img_1 = document.getElementById("sub2").setAttribute("src", "https://cdn.discordapp.com/attachments/820650570028154900/1186114323928592484/image.png?ex=6592120b&is=657f9d0b&hm=bd0ab3c25f3e471dc8508c259c3dbb7b1b6364faac1dce27191afbe871e7343d&");
+            console.log(img_1);
+            name.innerHTML = "귀여운 담비"
+            mny.innerHTML = "40,000원"
+
+        }
+
+        function fn_dambi3() {
+            let name = document.getElementById("product");
+            let mny = document.getElementById("money");
+            let img_1 = document.getElementById("sub2").setAttribute("src", "https://cdn.discordapp.com/attachments/820650570028154900/1186114261127287035/image.png?ex=659211fc&is=657f9cfc&hm=b0f6abfb41e5185edfb3f5f4dd0c8b6fdeee2c7bfda9fa2c3992c7fb687a1e70&");
+            console.log(img_1);
+            name.innerHTML = "아름다운 담비"
+            mny.innerHTML = "50,000원"
+
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+package bogang;
+
+public class Bogang {
+	public static void main(String[] args) {
+		
+		String s = "가나다";
+		
+		for(int a = 0; a < s.length(); a++) {
+			System.out.println(s.charAt(a));
+		}
+		
+	}
+}

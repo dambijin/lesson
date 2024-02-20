@@ -1,0 +1,15 @@
+package coffee;
+
+public class Coffee {
+
+	int price;
+	Coffee(int price){
+		
+	}
+	
+	
+	int pay(int money) {
+		
+	}
+	
+}

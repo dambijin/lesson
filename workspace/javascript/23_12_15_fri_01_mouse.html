@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 커서 바꾸기</title>
+</head>
+<body>
+    <style>
+        .btn{
+            border:1px solid goldenrod;
+            width:100px;
+            height: 70px;
+            text-align:center;
+            line-height:70px;
+            box-shadow:5px 5px 3px #555;
+            /* cursor는 마우스 커서를 바꿀 수 있음
+            보통 커서 사이즈는 16*16/18*18
+            poiner는 누르는 커서로 바뀜
+            cursor:pointer; */
+            /* 커서에 이미지 넣으려면 svg 확장명의 파일만 가능 */
+            cursor: url('https://dev.w3.org/SVG/tools/svgweb/samples/svg-files/android.svg'), auto;
+        }
+        [type="button"]{
+            background-color: rgb(175, 238, 175);
+        }
+    </style>
+    <div>
+        <a href="javascript:void(0)">아무동작안함</a>
+        <div class="btn">
+            div
+        </div>
+        <button type="button">버튼</button>
+    </div>
+    
+</body>
+</html>

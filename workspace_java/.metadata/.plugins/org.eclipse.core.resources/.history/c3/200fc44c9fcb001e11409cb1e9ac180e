@@ -1,0 +1,11 @@
+package exam3;
+
+
+// 상품 개별 정보
+public class Goods {
+
+	String name;
+	int price;
+	
+
+}

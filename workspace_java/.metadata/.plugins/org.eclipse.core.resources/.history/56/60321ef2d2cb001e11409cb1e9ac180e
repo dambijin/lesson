@@ -1,0 +1,16 @@
+package coffee;
+
+public class CoffeeExam {
+
+	public static void main(String[] args) {
+
+		Mega mega=new Mega(2000);
+		mega.pay(1000);
+		System.out.println(mega.toString());
+		mega.pay(3000);		
+		System.out.println(mega.toString());
+		
+		
+	}
+
+}

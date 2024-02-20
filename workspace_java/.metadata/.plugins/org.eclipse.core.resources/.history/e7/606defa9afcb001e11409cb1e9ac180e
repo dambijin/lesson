@@ -1,0 +1,18 @@
+package chap07;
+
+public class Child extends Parent {
+
+	int num;
+	String name = "Child의 name";
+
+	int getNum() {
+		System.out.println("Child의 getNum실행");
+		return num;
+	}
+	
+	void test() {
+		System.out.println("name : "+name);
+		System.out.println("this.name : "+this.name);
+	}
+
+}
