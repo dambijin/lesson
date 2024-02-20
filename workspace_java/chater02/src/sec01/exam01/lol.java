@@ -15,10 +15,7 @@ public class lol {
 					lol_winner = true;
 				}
 			}
-			if (lol_winner == false) {
-				int i=
-				System.out.println("111" + lol[i]);
-			}
+			
 		}
 
 	}
