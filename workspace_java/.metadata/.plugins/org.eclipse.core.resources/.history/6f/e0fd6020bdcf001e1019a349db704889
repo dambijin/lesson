@@ -1,0 +1,35 @@
+package org.zerock.w1;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class ParServlet
+ */
+@WebServlet("/param")
+public class ParServlet extends HttpServlet {
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		//들어오는 한글 깨짐 방지
+		request.setCharacterEncoding("utf-8");
+		
+//		브라우저에서 보낸 값을 확보
+
+//		key에 해당하는 값이 없으면 null
+		String key = request.getParameter("key");
+		System.out.println("ke"
+				+ "y : " + key);
+
+		PrintWriter out = response.getWriter();
+		out.println("key : " + key );
+		out.println("<br>");
+	}
+
+}
