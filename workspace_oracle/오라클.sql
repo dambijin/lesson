@@ -1308,3 +1308,4 @@ FROM(
 )
 WHERE RNUM >= 5 AND RNUM <= 7;
 
+select * from emp;
