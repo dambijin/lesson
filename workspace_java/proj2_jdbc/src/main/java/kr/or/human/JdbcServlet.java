@@ -31,12 +31,9 @@ public class JdbcServlet extends HttpServlet {
 
 	void controller(HttpServletRequest request, HttpServletResponse response) {
 		try {
-//			들어오는 한글 깨짐 방지
+//			한글 깨짐 방지
 			request.setCharacterEncoding("UTF-8");
-
-//			내보내는 한글 깨짐 방지
 			response.setContentType("text/html; charset=utf-8;");
-
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
@@ -56,8 +53,13 @@ public class JdbcServlet extends HttpServlet {
 			Connection con = DriverManager.getConnection(url, user, password);
 			System.out.println("Connection 생성 성공");
 
-			String name = "S";
+//			String name = "SCOTT";
+//			String name = "S";
+//			String name = "s";
+			String name = request.getParameter("name");
+			
 //			SQL 작성
+			
 			String query = "";
 			query += " select";
 			query += " *";
@@ -67,7 +69,9 @@ public class JdbcServlet extends HttpServlet {
 //			query += " where ename = '"+ name +"'";
 //			query += " where ename = ?";
 			
-			query += " where ename like '%' || ? || '%'";
+//			query += " where ename like '%' || ? || '%'";
+			query += " where lower(ename) like '%' || lower(?) || '%'";
+			
 //			select*fromemp
 			System.out.println("query : " + query);
 
@@ -95,7 +99,7 @@ public class JdbcServlet extends HttpServlet {
 
 				System.out.println("empno : " + empno);
 				System.out.println("ename : " + ename);
-				System.out.println("emhiredatepno : " + hiredate);
+				System.out.println("hiredate : " + hiredate);
 				System.out.println("-----------------");
 
 				PrintWriter out = response.getWriter();
