@@ -1,5 +1,0 @@
-package login;
-
-public class LoginGoogle extends Login{
-
-}

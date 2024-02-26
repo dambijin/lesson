@@ -62,6 +62,35 @@ public class EmpServlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		//		한글 깨짐 방지
+		try {
+			request.setCharacterEncoding("UTF-8");
+			response.setContentType("text/html; charset=utf-8;");
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
+
+//		전달받은 값 parameter 확보
+//		getParameter는 String 타입으로만 사용
+		String ename = request.getParameter("ename");
+		String strEmpno = request.getParameter("empno");
+		int empno = -1;
+		
+		try {
+			empno = Integer.parseInt(strEmpno);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		EmpDTO empDTO =new EmpDTO();
+		empDTO.setEname(ename);
+		empDTO.setEmpno(empno);
+		
+		EmpDAO empDAO = new EmpDAO();
+		int result = empDAO.updateEmp2(empDTO);
+		System.out.println("업데이트 결과 : "+result);
+		
+		response.sendRedirect("emp");
 	}
 
 	protected void doPut(HttpServletRequest request, HttpServletResponse response)

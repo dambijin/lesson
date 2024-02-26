@@ -24,7 +24,7 @@ public class EmpView {
 //			Date hiredate = (Date)map.get("hiredate");
 			
 			EmpDTO dto = (EmpDTO)list.get(i);
-			int empno = dto.getDeptno();
+			int empno = dto.getEmpno();
 			String ename = dto.getEname();
 			Date hiredate = dto.getHiredate();
 
