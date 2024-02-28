@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value=""/>
+		<item key="selection" value="board_sub"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="board_sub"/>
+			<item value="getSelectQueryAll"/>
+			<item value="title_list"/>
+			<item value="data_list"/>
+			<item value="DBConn."/>
+			<item value="result_list"/>
+			<item value="글쓰기"/>
+			<item value="정보를"/>
+			<item value="w./"/>
+			<item value="./"/>
+			<item value="html"/>
+			<item value="../"/>
+			<item value="html."/>
 			<item value="deptno"/>
 			<item value="depto"/>
-			<item value="jakarta"/>
-			<item value="size"/>
-			<item value="printBookList"/>
-			<item value="indexOf"/>
-			<item value="printBookList(result)"/>
-			<item value="  printBookList(result)"/>
-			<item value="deepCopy"/>
-			<item value="printBookList(result);"/>
-			<item value="rentableList"/>
-			<item value="searchTitle"/>
-			<item value="목록"/>
-			<item value="isnb"/>
-			<item value="scan"/>
 		</list>
 		<list key="replacehistory">
 			<item value="empno"/>
@@ -31,8 +31,8 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="805"/>
-		<item key="DIALOG_Y_ORIGIN" value="226"/>
+		<item key="DIALOG_X_ORIGIN" value="-406"/>
+		<item key="DIALOG_Y_ORIGIN" value="217"/>
 		<item key="DIALOG_WIDTH" value="320"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
