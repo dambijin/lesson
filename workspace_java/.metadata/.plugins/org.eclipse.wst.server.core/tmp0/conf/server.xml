@@ -160,7 +160,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="D:\lesson\workspace_java\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\lesson\workspace_java\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\proj4_scope" path="/proj4_scope" reloadable="true" source="org.eclipse.jst.jee.server:proj4_scope"/><Context docBase="D:\lesson\workspace_java\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\proj5_filter" path="/proj5_filter" reloadable="true" source="org.eclipse.jst.jee.server:proj5_filter"/><Context docBase="D:\lesson\workspace_java\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\carpedm" path="/carpedm" reloadable="true" source="org.eclipse.jst.jee.server:carpedm"/><Context docBase="D:\lesson\workspace_java\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\proj3_jsp" path="/proj3_jsp" reloadable="true" source="org.eclipse.jst.jee.server:proj3_jsp"/></Host>
+      <Context docBase="D:\workspace_java\workspace_java\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\workspace_java\workspace_java\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\proj6_param" path="/proj6_param" reloadable="true" source="org.eclipse.jst.jee.server:proj6_param"/></Host>
     </Engine>
   </Service>
 </Server>
