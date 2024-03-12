@@ -30,8 +30,7 @@ public class LoginServlet extends HttpServlet {
 		
 		System.out.println("아이디 : "+user_id);
 		System.out.println("비밀번호 : "+user_pw);
-		
-	
+
 	}
 	
 	public void destroy() {

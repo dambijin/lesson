@@ -23,7 +23,22 @@
     <WatchedResource>${catalina.base}/conf/web.xml</WatchedResource>
 
     <!-- Uncomment this to disable session persistence across Tomcat restarts -->
-    <!--
-    <Manager pathname="" />
-    -->
+   <Manager pathname="" />
+   
+   
+<!--    auth : 인증 -->
+<!--    maxTotal : 몇개까지 볼 것인지 -->
+   <Resource
+     name="jdbc/oracle"
+     auth="container"
+     type="javax.sql.DataSource"
+     driverClassName="oracle.jdbc.driver.OracleDriver"
+     url="jdbc:oracle:thin:@112.148.46.134:51521:xe"
+     username="scott4_12"
+     password="tiger"
+	 maxTotal="50"
+     maxWaitMillis="-1"
+    />
+   
+   
 </Context>
