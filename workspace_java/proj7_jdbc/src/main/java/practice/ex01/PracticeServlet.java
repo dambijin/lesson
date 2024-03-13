@@ -22,24 +22,26 @@ public class PracticeServlet extends HttpServlet {
 		PracticeDAO practiceDAO = new PracticeDAO();
 		List emp = practiceDAO.listEmp();
 		request.setAttribute("emp", emp);
+		
+//		where문
 		List empinsert =practiceDAO.processRequest(request);
 		request.setAttribute("empinsert", empinsert);
 		
 		
 //		jsp에 사용하기전에 출력용으로 사용함
 //		그대로 for문 jsp에 이식
-		for (int i = 0; i < emp.size(); i++) {
-			EmpDTO empDTO = (EmpDTO) emp.get(i);			
-			int empno = empDTO.getEmpno();
-			String ename = empDTO.getEname();
-			String job = empDTO.getJob();
-			int mgr = empDTO.getMgr();
-			Date hiredate = empDTO.getHiredate();	
-			int sal = empDTO.getSal();
-			int comm= empDTO.getComm();
-			int deptno= empDTO.getDeptno();
-			System.out.println("empno : "+empno);
-		}
+//		for (int i = 0; i < emp.size(); i++) {
+//			EmpDTO empDTO = (EmpDTO) emp.get(i);			
+//			int empno = empDTO.getEmpno();
+//			String ename = empDTO.getEname();
+//			String job = empDTO.getJob();
+//			int mgr = empDTO.getMgr();
+//			Date hiredate = empDTO.getHiredate();	
+//			int sal = empDTO.getSal();
+//			int comm= empDTO.getComm();
+//			int deptno= empDTO.getDeptno();
+//			System.out.println("empno : "+empno);
+//		}
 		
 		
 		

@@ -15,18 +15,17 @@ import sec01.ex01.jdbc.part.EmpDTO;
 
 public class DbcpDAO {
 	private Connection con;
-	
+
 	void connDB() {
 		try {
-		Context ctx=new InitialContext();
-		DataSource dataFactory = (DataSource) ctx.lookup("java:/comp/env/jdbc/oracle");
-		this.con = dataFactory.getConnection();
+			Context ctx = new InitialContext();
+			DataSource dataFactory = (DataSource) ctx.lookup("java:/comp/env/jdbc/oracle");
+			this.con = dataFactory.getConnection();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
-	
+
 	List listEmp() {
 		long begin = System.currentTimeMillis();
 		connDB();
@@ -88,9 +87,53 @@ public class DbcpDAO {
 			}
 		}
 		long end = System.currentTimeMillis();
-		System.out.println("걸린시간 : "+(end-begin));
-		
+		System.out.println("걸린시간 : " + (end - begin));
+
 		return list;
+	}
+
+	// insert
+	int insertEmp2(String a1, String a2, String a3, String a4) {
+		int result = -9999;
+		connDB();
+
+		PreparedStatement ps = null;
+
+		try {
+			// SQL 준비
+			String query = "insert into emp2 (empno, ename, sal, deptno)";
+			query += " values (?, ?, ?, ?)";
+
+			ps = con.prepareStatement(query);
+			ps.setString(1, a1);
+			ps.setString(2, a2);
+			ps.setString(3, a3);
+			ps.setString(4, a4);
+
+//			SQL 실행 및 결과 확보
+			result = ps.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (ps != null) {
+				try {
+					ps.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+
+			if (this.con != null) {
+				try {
+					this.con.close();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+		return result;
 	}
 
 }

@@ -55,7 +55,7 @@ border-collapse: collapse;
 		<td><%=ename%></td>
 		<td><%=sal%></td>
 		<td><button>삭제</button></td>
-		<td><button value="<%=empno%>" name="insert_empno" id="insert_empno">조회</button></td>
+		<td><button value="<%=empno%>" name="insert_empno" id="in_empno">조회</button></td>
 		<td><input type="text"><button>변경</button></td>
 		<td><input type="text"><button>변경</button></td>
 	</tr>
@@ -79,14 +79,14 @@ border-collapse: collapse;
 		<td>부서번호</td>
 	</tr>
 	<tr>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
-		<td></td>
+		<td id="in_empno"></td>
+		<td id="in_ename"></td>
+		<td id="in_job"></td>
+		<td id="in_mgr"></td>
+		<td id="in_hiredate"></td>
+		<td id="in_sal"></td>
+		<td id="in_comm"></td>
+		<td id="in_deptno"></td>
 	</tr>
 </table>
 </div>
@@ -122,23 +122,27 @@ border-collapse: collapse;
 
 <script>
 <% List empinsert=(List) request.getAttribute("empinsert"); %>
-	document.querySelector("#insert_empno").addEventListener("click", function(event){
+
+	document.querySelector("#in_empno").addEventListener("click", function(event){
 			doAjax();
+			
+			let in_empno = document.querySelector("#in_empno").value;
+			console.log(in_empno);
 		})
 			
 	function doAjax(){
 		console.log("doAjax 실행")
 		// ajax 객체 생성
-		let chr = new XMLHttpRequest();
+		let chr =  new XMLHttpRequest();
 		// 보낼 준비
-		xhr.open("get", "practice");
+		chr.open("get", "practice");
 		// 보내기(단! 언제 끝날지 모름)
-		xhr.send();
+		chr.send();
 		
 		// 다녀온 후 (응답 이후)
 		chr.onload=function(){
 			// 받아온 내용이 저장되는 곳
-			let data=xhr.responseText;
+			let data=chr.responseText;
 			console.log(data);
 			}		
 		}

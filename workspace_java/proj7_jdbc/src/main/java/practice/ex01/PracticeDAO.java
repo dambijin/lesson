@@ -109,7 +109,7 @@ public class PracticeDAO {
 
 		try {
 			String query = "select * from emp2";
-			query += "where " + empnumber;
+			query += " where empno=" + empnumber;
 			ps = con.prepareStatement(query);
 			rs = ps.executeQuery();
 
