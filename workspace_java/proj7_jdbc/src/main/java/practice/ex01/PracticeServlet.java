@@ -16,18 +16,13 @@ import sec02.ex01.dbcd.DbcpDAO;
 
 @WebServlet("/practice")
 public class PracticeServlet extends HttpServlet {
+	PracticeDAO practiceDAO = new PracticeDAO();
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		response.setContentType("text/html; charset=utf-8;");
-		PracticeDAO practiceDAO = new PracticeDAO();
 		List emp = practiceDAO.listEmp();
 		request.setAttribute("emp", emp);
-		
-//		where문
-		List empinsert =practiceDAO.processRequest(request);
-		request.setAttribute("empinsert", empinsert);
-		
-		
 //		jsp에 사용하기전에 출력용으로 사용함
 //		그대로 for문 jsp에 이식
 //		for (int i = 0; i < emp.size(); i++) {
@@ -42,10 +37,19 @@ public class PracticeServlet extends HttpServlet {
 //			int deptno= empDTO.getDeptno();
 //			System.out.println("empno : "+empno);
 //		}
-		
-		
-		
+
 		request.getRequestDispatcher("practice.jsp").forward(request, response);
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+//		where문
+		String in_empno = request.getParameter("insert_empno");
+		List empinsert = practiceDAO.processRequest(request, in_empno);
+		request.setAttribute("empinsert", empinsert);
+
+		
 	}
 
 }

@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="Redi"/>
+		<item key="selection" value="List"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="list"/>
+			<item value="getAtt"/>
+			<item value="setAtt"/>
+			<item value="empinsert"/>
+			<item value="in_empno"/>
+			<item value="emp"/>
+			<item value="processRequest"/>
+			<item value="getConnection"/>
 			<item value="redi"/>
 			<item value="manager"/>
 			<item value="insert_empno"/>
-			<item value="in_empno"/>
 			<item value="sendRedirect"/>
 			<item value="총"/>
 			<item value="listEmp"/>
-			<item value="processRequest"/>
 			<item value="select"/>
-			<item value="value"/>
-			<item value="list"/>
-			<item value="emp"/>
-			<item value="empDTO"/>
-			<item value="hiredate"/>
-			<item value="board_sub"/>
 		</list>
 		<list key="replacehistory">
 			<item value="empno"/>
@@ -31,8 +31,8 @@
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="50"/>
-		<item key="DIALOG_Y_ORIGIN" value="147"/>
+		<item key="DIALOG_X_ORIGIN" value="-791"/>
+		<item key="DIALOG_Y_ORIGIN" value="146"/>
 		<item key="DIALOG_WIDTH" value="320"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>

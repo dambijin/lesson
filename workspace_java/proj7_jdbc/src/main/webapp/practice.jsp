@@ -79,14 +79,14 @@ border-collapse: collapse;
 		<td>부서번호</td>
 	</tr>
 	<tr>
-		<td id="in_empno"></td>
-		<td id="in_ename"></td>
-		<td id="in_job"></td>
-		<td id="in_mgr"></td>
-		<td id="in_hiredate"></td>
-		<td id="in_sal"></td>
-		<td id="in_comm"></td>
-		<td id="in_deptno"></td>
+		<td id="inse_empno"></td>
+		<td id="inse_ename"></td>
+		<td id="inse_job"></td>
+		<td id="inse_mgr"></td>
+		<td id="inse_hiredate"></td>
+		<td id="inse_sal"></td>
+		<td id="inse_comm"></td>
+		<td id="inse_deptno"></td>
 	</tr>
 </table>
 </div>
@@ -121,31 +121,40 @@ border-collapse: collapse;
 </div>
 
 <script>
-<% List empinsert=(List) request.getAttribute("empinsert"); %>
+<% List empinsert=(List) request.getAttribute("empinsert"); 
+for(int i=0; i<empinsert.size(); i++){ 
+	EmpDTO empDTO = (EmpDTO) empinsert.get(i);
+	int empno = empDTO.getEmpno();
+	String ename = empDTO.getEname();
+	String job = empDTO.getJob();
+	int mgr = empDTO.getMgr();
+	Date hiredate = empDTO.getHiredate();	
+	int sal = empDTO.getSal();
+	int comm= empDTO.getComm();
+	int deptno= empDTO.getDeptno();
+%>
 
-	document.querySelector("#in_empno").addEventListener("click", function(event){
-			doAjax();
-			
-			let in_empno = document.querySelector("#in_empno").value;
-			console.log(in_empno);
+document.querySelector("#in_empno").addEventListener("click", function(event){
+		let in_empno=document.querySelector("#in_empno").value;
+		
+		let inse_empno=document.querySelector("#inse_empno").value;
+		let inse_ename=document.querySelector("#inse_ename").value;
+		let inse_job=document.querySelector("#inse_job").value;
+		let inse_mgr=document.querySelector("#inse_mgr").value;
+		let inse_hiredate=document.querySelector("#inse_hiredate").value;
+		let inse_sal=document.querySelector("#inse_sal").value;
+		let inse_comm=document.querySelector("#inse_comm").value;
+		let inse_deptno=document.querySelector("#inse_deptno").value;
+		
+		
+		inse_empno=<%=empno%>;
+		
+		
+				
 		})
 			
-	function doAjax(){
-		console.log("doAjax 실행")
-		// ajax 객체 생성
-		let chr =  new XMLHttpRequest();
-		// 보낼 준비
-		chr.open("get", "practice");
-		// 보내기(단! 언제 끝날지 모름)
-		chr.send();
-		
-		// 다녀온 후 (응답 이후)
-		chr.onload=function(){
-			// 받아온 내용이 저장되는 곳
-			let data=chr.responseText;
-			console.log(data);
-			}		
-		}
+<%}
+%>
 </script>
 </body>
 </html>
