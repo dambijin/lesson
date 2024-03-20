@@ -8130,3 +8130,18 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-03-20 09:19:16.684
 !MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.jdt.core 4 969 2024-03-20 10:50:25.533
+!MESSAGE proj11 does not exist
+
+!ENTRY org.eclipse.jdt.core 4 969 2024-03-20 10:50:25.534
+!MESSAGE proj11 does not exist
+
+!ENTRY org.eclipse.jdt.core 4 969 2024-03-20 10:50:25.535
+!MESSAGE proj11 does not exist
+
+!ENTRY org.eclipse.jdt.core 4 969 2024-03-20 10:50:25.535
+!MESSAGE proj11 does not exist
+
+!ENTRY org.eclipse.jdt.core 4 969 2024-03-20 10:50:25.536
+!MESSAGE proj11 does not exist
