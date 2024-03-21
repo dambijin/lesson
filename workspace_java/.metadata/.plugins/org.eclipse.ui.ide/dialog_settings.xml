@@ -19,6 +19,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\lesson\workspace_java\proj13_action"/>
 			<item value="D:\lesson\workspace_java\proj4_scope"/>
 			<item value="D:\lesson\workspace_java\chap13"/>
 			<item value="D:\lesson\workspace_java\proj2_jdbc_t"/>
