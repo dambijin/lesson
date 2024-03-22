@@ -28,7 +28,23 @@ ${'acaa'>'abzz' } : 앞 글자부터 하나씩 비교<br>
 ${'aa'<'aaa'} <br>
 
 <hr>
-c:else가 없다
+c:else가 없다.. 그렇다면!!<br>
+
+<c:if test = '${not(age gt 20) }'>
+age가 20보다 큽니다의 반대<br>
+</c:if>
+
+<%-- <c:if test='${not ((age gt 20) and (age lt 30)) }'> --%>
+<%-- <c:if test='${! ((age > 20) && (age < 30)) }'> --%>
+<c:if test='${((age <= 20) || (age >= 30)) }'>
+age가 20보다 큽니다의 반대<br>
+</c:if>
+
+의심나면 그냥 출력해보기 : \${((age <= 20) || (age >= 30)) } : ${((age <= 20) || (age >= 30)) }
+
+
+
+
 
 
 </body>
