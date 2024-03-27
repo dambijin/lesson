@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="sendRedirect"/>
+		<item key="selection" value="param1"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="."/>
-			<item value="sendRedirect"/>
-			<item value="list"/>
-			<item value="title_st"/>
-			<item value="hinid"/>
-			<item value="close_id"/>
-			<item value="QnA_delete"/>
-			<item value="close"/>
-			<item value="N_ID"/>
-			<item value="href"/>
-			<item value="공개"/>
-			<item value="비공개"/>
-			<item value="작성자"/>
-			<item value="subtext"/>
-			<item value="textarea"/>
+			<item value="param1"/>
+			<item value="file_repo"/>
+			<item value="download"/>
+			<item value="1711429771442_2"/>
+			<item value="sysdate"/>
+			<item value="map"/>
+			<item value="mem"/>
+			<item value="get"/>
+			<item value="viewUpdate"/>
+			<item value="update"/>
+			<item value="member"/>
+			<item value="manager"/>
+			<item value="Attribute(&quot;mem&quot;"/>
+			<item value="NOPT"/>
+			<item value="mpid"/>
 		</list>
 		<list key="replacehistory">
 			<item value="empno"/>

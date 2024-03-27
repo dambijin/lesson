@@ -160,7 +160,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="D:\lesson\workspace_java\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\lesson\workspace_java\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\carpedm" path="/carpedm" reloadable="true" source="org.eclipse.jst.jee.server:carpedm"/><Context docBase="D:\lesson\workspace_java\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\proj14_jstl" path="/proj14_jstl" reloadable="true" source="org.eclipse.jst.jee.server:proj14_jstl"/></Host>
+      <Context docBase="D:\lesson\workspace_java\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\lesson\workspace_java\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\carpedm" path="/carpedm" reloadable="true" source="org.eclipse.jst.jee.server:carpedm"/><Context docBase="D:\lesson\workspace_java\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\proj15_file" path="/proj15_file" reloadable="true" source="org.eclipse.jst.jee.server:proj15_file"/></Host>
     </Engine>
   </Service>
 </Server>
