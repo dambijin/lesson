@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'PyeongChangPeace-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+        .wf{
+            font-family:"PyeongChangPeace-Bold";
+        }
+        test2{
+            
+        }
+        [type=checkbox]:checked+span {
+            text-decoration: line-through;
+        }
+
+        .test1 {
+            border: 1px solid red;
+            width: 200px;
+        }
+
+        .nowrap {
+            white-space: nowrap;
+            overflow: hidden;
+            /*흘러넘치는 무언가를 가려줌 /overflow가 없으면 text-overflow는 동작하지 않음*/
+            text-overflow: ellipsis;
+        }
+
+        .word {
+            word-wrap: break-word;
+        }
+
+        .word-b {
+            word-break: break-all;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>
+                <input type="checkbox">
+                <span>할일1</span>
+            </li>
+            <li>
+                <input type="checkbox">
+                <span>할일2</span>
+            </li>
+            <li>
+                <input type="checkbox">
+                <span>할일3</span>
+            </li>
+        </ul>
+    </div>
+    <div class="test1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, molestias dolorem facere ducimus optio consectetur
+        voluptatem nemo dignissimos ipsum saepe officia repellat maiores magni blanditiis quae. Tempora optio debitis
+        nam!
+    </div>
+    <div class="test1 nowrap" title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, molestias dolorem facere ducimus optio consectetur
+    voluptatem nemo dignissimos ipsum saepe officia repellat maiores magni blanditiis quae. Tempora optio debitis
+    nam!">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, molestias dolorem facere ducimus optio consectetur
+        voluptatem nemo dignissimos ipsum saepe officia repellat maiores magni blanditiis quae. Tempora optio debitis
+        nam!
+    </div>
+    <div class="test1 word">
+        fkldfjlqkjfdlkjfqoijfdoijfoijfklejkfllksdfjiqjfoidjiofqlkjfdlkjfaoijfdoifhaheufhjdhfkjahkjdhfalfkdjfauhduihweuihfkjdhfkajkjdnfjvhuiahdfuasd;hfhadkfjhkwefrfjjlhduiaf
+    </div>
+    <div class="test1 word-b">
+        fqqqqqqqqqqqqdlkjfqoijfdoijfoijfklejkfllksdfjiqjfoidjiofqlkjfdlkjfaoijfdoifhaheufhjdhfkjahkjdhfalfkdjfauhduihweuihfkjdhfkajkjdnfjvhuiahdfuasd;hfhadkfjhkwefrfjjlhduiaf
+    </div>
+    <br><br>
+    <div class="test2 wf">
+        ♥은비랑 함께 가는 일본여행♥
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>+++ for문 예제</title>
+    <script>
+        //1단계 +++++
+        document.write("1단계<br>");
+
+        let str = "+";
+        for (let str = 1; str <= 5; str++) {
+            document.write("*");
+        }
+        document.write("<hr>");
+
+
+
+        /*2단계
+        +++++
+        +++++
+        +++++
+        */
+
+        document.write("2-1단계<br>");
+        for (let str = 1; str <= 3; str++) {
+            document.write("*****" + "<br>");
+        }
+        document.write("<br>");
+
+        document.write("2-2단계<br>");
+        for (let tr = 1; tr <= 3; tr++) {
+            for (let str = 1; str <= 5; str++) {
+                document.write("*")
+            }
+            document.write("<br>")
+        }
+        document.write("<hr>");
+
+
+
+        /*3단계
+        +
+        ++
+        +++
+        ++++
+        +++++
+        */
+        document.write("3단계<br>");
+        for (let j = 0; j < 5; j++) {
+            for (let i = 0; i <= j; i++) {
+                document.write("*");
+            }
+            document.write("<br>")
+        }
+
+        document.write("<hr>");
+
+
+        // for (let i = 1; i <= 1; i++) {
+        //     document.write("*");
+        // }
+
+        // for (let i = 1; i <= 2; i++) {
+        //     document.write("*");
+        // }
+
+        /*4단계
+        +....
+        ++...
+        +++..
+        ++++.
+        +++++
+        */
+        document.write("4단계<br>");
+
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 0; j < i; j++) {
+                document.write("+");
+            }
+            for (let j = 0; j < 5 - i; j++) {
+                document.write(".");
+            }
+            document.write("<br>");
+        }
+        document.write("<hr>");
+
+
+        /*5단계
+        ....+
+        ...++
+        ..+++
+        .++++
+        +++++        
+        */
+        document.write("5단계<br>");
+
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 0; j < 5 - i; j++) {
+                document.write(".");
+            }
+            for (let j = 0; j < i; j++) {
+                document.write("+");
+            }
+            document.write("<br>");
+        }
+
+
+        document.write("<hr>");
+
+        /*6단계
+        ....+
+        ...+++
+        ..+++++
+        .+++++++
+        +++++++++
+        */
+
+        document.write("6단계<br>");
+        for (let i = 1; i < 6; i++) {
+            for (let j = 0; j < 5 - i; j++) {
+                document.write("#");
+            }
+            for (let j = 0; j < i * 2 - 1; j++) {
+                document.write("+");
+            }
+
+            document.write("<br>");
+        }
+
+
+        //실패!
+        // for (let i = 0; i < 5; i++) {
+        //     for (let j = 0; j < 5 - i; j++) {
+        //         document.write(".");
+        //     }
+        //     for (let j = 0; j < i + 2; j++) {
+        //         document.write("+");
+        //     }
+        //     document.write("<br>");
+        // }
+
+        
+
+        
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

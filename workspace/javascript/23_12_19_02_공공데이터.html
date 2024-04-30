@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mart {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            text-align: center;
+            line-height: 200px;
+            margin: 10px;
+            padding: 10px;
+            display: inline-block;
+            vertical-align: top;
+
+        }
+    </style>
+    <script>
+        function getMarketList(name, dom) {
+            console.log("getMarketList : ", name);
+            let url = "https://apis.data.go.kr/4490000/centralmarket/centralmarketList"
+            url += "?";
+            url += "serviceKey=" + "Df%2BxRBqKWDRy0hIsONpD89e6B3chprVa%2Fe6bmfgEarM2Ffom%2B62oeDPXV1BJh0oW%2BLXqgHb0eQhvpYRS7p9QWA%3D%3D";
+            url += "&";
+            url += "type=json";
+            url += "&";
+            // 데이터 파일에 있는 한페이지 결과수
+            url += "numOfRows=5";
+
+
+            let xhr = new XMLHttpRequest();
+            xhr.open("get", url);
+            xhr.send();
+            xhr.onload = function () {
+                let data = xhr.responseText;
+                // console.log(data);
+                let json = JSON.parse(data);
+
+                console.log("상호명 : ", json.item[2].conm);
+                console.log("운영시간 : ", json.item[2].hour);
+                console.log("전화번호 : ", json.item[2].telno);
+
+
+
+                for (let i = 0; i < json.item.length; i++) {
+                    if (json.item[i].conm == name) {
+
+                        // json.item[i].conm : 받아온 상호명
+                        // name : 검색하고 싶은 상호명
+                        console.log("상호명 : ", json.item[i].conm);
+                        console.log("운영시간 : ", json.item[i].hour);
+                        console.log("전화번호 : ", json.item[i].telno);
+                        console.log("----------------------");
+
+                        let html = "";
+                        html += "<div>상호명 : " + json.item[i].conm + "</div>"
+                        html += "<div>운영시간 : " + json.item[i].hour + "</div>"
+                        html += "<div>전화번호 : " + json.item[i].telno + "</div>"
+
+                        dom.style.lineHeight = "16px";
+                        dom.innerHTML = html;
+                    }
+                }
+            }
+
+        }
+
+        window.addEventListener('load', function () {
+            let marts = document.querySelectorAll(".mart");
+            for (let mart of marts) {
+                mart.addEventListener("mouseenter", function (event) {
+                    //getAttribute 속성값 가져오는 것
+                    let name = event.target.getAttribute("data-name");
+                    console.log(name);
+                    getMarketList(name, event.target);
+                })
+
+                mart.addEventListener("mouseout", function (event) {
+                    //getAttribute 속성값 가져오는 것
+                    let name = event.target.getAttribute("data-name");
+                    event.target.style.lineHeight ="200px";
+                    event.target.innerHTML=name;
+                })
+
+            }
+        })
+
+    </script>
+</head>
+
+<body>
+    <div>
+        <div class="mart" data-name="청년상회">
+            청년상회
+        </div>
+        <div class="mart" data-name="아시아마트">
+            아시아마트
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+D:\lesson\worksapce_cs\Hello\bin\Debug\net8.0\Hello.exe
+D:\lesson\worksapce_cs\Hello\bin\Debug\net8.0\Hello.deps.json
+D:\lesson\worksapce_cs\Hello\bin\Debug\net8.0\Hello.runtimeconfig.json
+D:\lesson\worksapce_cs\Hello\bin\Debug\net8.0\Hello.dll
+D:\lesson\worksapce_cs\Hello\bin\Debug\net8.0\Hello.pdb
+D:\lesson\worksapce_cs\Hello\obj\Debug\net8.0\Hello.GeneratedMSBuildEditorConfig.editorconfig
+D:\lesson\worksapce_cs\Hello\obj\Debug\net8.0\Hello.AssemblyInfoInputs.cache
+D:\lesson\worksapce_cs\Hello\obj\Debug\net8.0\Hello.AssemblyInfo.cs
+D:\lesson\worksapce_cs\Hello\obj\Debug\net8.0\Hello.csproj.CoreCompileInputs.cache
+D:\lesson\worksapce_cs\Hello\obj\Debug\net8.0\Hello.sourcelink.json
+D:\lesson\worksapce_cs\Hello\obj\Debug\net8.0\Hello.dll
+D:\lesson\worksapce_cs\Hello\obj\Debug\net8.0\refint\Hello.dll
+D:\lesson\worksapce_cs\Hello\obj\Debug\net8.0\Hello.pdb
+D:\lesson\worksapce_cs\Hello\obj\Debug\net8.0\Hello.genruntimeconfig.cache
+D:\lesson\worksapce_cs\Hello\obj\Debug\net8.0\ref\Hello.dll

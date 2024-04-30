@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let str = "01234567890123456789";
+        //indexOf
+        //글씨를 인덱스0부터 찾아줌
+        //첫번째 찾은것만 return함
+        let idx = str.indexOf("3");
+        console.log(idx)
+
+        //첫번째 찾은 글자를 나타내기 때문에 
+        //idx=str.indexOf("3"); 이것과 똑같음 
+        idx = str.indexOf("345");
+        console.log(idx)
+
+        //없을 때는 -1로 추출됨
+        //사용할때는 이 글자가 있는지 없는지 확인을 위해서 사용
+        idx = str.indexOf("a");
+        console.log(idx);
+
+        let result = str.slice(2, 6);
+        console.log('slice(2,6) : ', result);
+
+
+        result = str.substring(2, 6);
+        console.log('substring(2, 6) : ', result);
+
+        str = "AbCdEf";
+        console.log(str.toLowerCase())
+        str2 = "AB";
+        result = str.toLowerCase().indexOf(str2.toLowerCase());
+        console.log(result);
+
+
+        //trim 함수
+        str = "   a   b   c   ";
+        console.log("["+str.trim()+"]");
+        console.log("len : ",str.length);
+
+
+
+        //str원본 가져와서 다시 시작
+        str = "01234567890123456789";
+        result=str.replace("23",);
+        console.log(result);
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

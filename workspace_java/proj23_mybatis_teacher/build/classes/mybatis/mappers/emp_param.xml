@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.emp.param">
+	
+	<!--
+		parameterType 전달인자 받기(생략은 가능하다)
+		
+		#{empno}마음대로 변수명 정해서 썼는데 안될때
+		+	#{_parameter}를 사용하면 된다
+		
+		전달인자가 list 또는 배열인 경우
+		+	#{0}, #{1}, #{param1}, #{param2} 
+		
+		#{} : 자동으로 '를 붙여줌. 숫자일때는 안붙여줌 
+		${} : 아무것도 안붙임 *쪼끔 위험
+	-->
+	<select id="selectEmpByEmpno" resultType="empDTO3" parameterType="string">
+	
+		select * from emp4
+		where empno = #{_parameter}
+	
+	</select>
+	<!-- com.spring.ex03.param.EmpDTO 쓰기 귀찮으니 empDTO3 사용  -->
+<!-- 	<insert id="insertEmp" parameterType="com.spring.ex03.param.EmpDTO"> -->
+<!-- 	<insert id="insertEmp" parameterType="empDTO3"> -->
+<!-- 		insert into emp4 ( -->
+<!-- 			empno,  -->
+<!-- 			ename,  -->
+<!-- 			sal,  -->
+<!-- 			deptno,  -->
+<!-- 			hiredate -->
+<!-- 		) values ( -->
+<!-- 			#{empno}, -->
+<!-- 			#{ename}, -->
+<!-- 			#{sal}, -->
+<!-- 			#{deptno}, -->
+<!-- 			sysdate -->
+<!-- 		) -->
+<!-- 	</insert> -->
+	
+	<update id="updateEmp" parameterType="empDTO3">
+		update emp4
+		set
+			ename = #{ename},
+			sal = #{sal},
+			deptno = #{deptno}
+		where
+			empno = #{empno}
+	</update>
+<!-- 	<insert id="test2" parameterType="dto" useGeneratedKeys="true" keyProperty="a_id"> -->
+<!-- 		insert into table_a (a_id, name) -->
+<!-- 		values (seq_a.nextval, #{name}) -->
+<!-- 	</insert> -->
+</mapper>

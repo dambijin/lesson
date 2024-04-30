@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        1. 15와 20이 주어졌을 때 세번째 값이 그 사이에 있는지 확인(if문)
+        2. 사각형의 좌상단좌표, 우하단좌표가 있고 점의 좌표가 있을 때 그 점이 사각형에 포함 되는지 확인 
+        x1, y1 = 10, 20
+        x2, y2 = 100,110
+        x3, y3 = ? ?     
+        3. 1~100까지 합계 구하기
+        4. 1~100까지 짝수의 합계 구하기
+        5. 구구단 2~3단씩 출력
+        2x1=2 3x1=3
+        2x2=4 3x2=6
+
+        [3, 4, 7, 5, 1]
+        6. 숫자 배열이 있을 때 최대값 구하기(단,sort 쓰지말고)
+        7. 두번째 최대값 구하기
+        8. 내림차순 정렬
+        9. 예약
+        자리가 10개 있는 소극장 예약 시스템을 만들건데
+        1~10번 자리까지 있음
+        예약 가능하면 "예약했습니다"
+        예약 불가능하면 "이미 예약 되어있습니다"
+        첫번째 사용자가 2번 자리를 예약
+        두번째 사용자가 2번 자리를 예약
+        남은 자리를 출력
+
+        
+        while (true) {
+                let r = prompt("예약할 자리를 입력해주세요(종료:x)")
+                console.log(r)
+                if (r == "x") {
+                    break;
+                }
+
+            }
+        
+        */
+
+        //1번
+        let i = 20;
+        if (i == 17) {
+            console.log("세번째 값이 맞다");
+        } else if (15 <= i <= 20) {
+            console.log("세번째 값이 아니다.");
+        } else {
+            console.log("잘못 입력했습니다.")
+        }
+
+        //2번
+        let x1 = 10, y1 = 20;
+        let x2 = 100, y2 = 110;
+        let x3 = 80, y3 = 80;
+
+        if (x1 <= x3 && x3 <= x2 && y1 <= y3 && y3 <= y2) {
+            console.log("사각형안의 좌표에 포함된다.");
+        } else {
+            console.log("사각형안의 좌표에 포함되지 않는다.");
+        }
+
+        //3번
+        /*
+        1~100 더하기
+        0+1= 1;
+        1+2 = 3; 1+(1+1)=3
+        3+3 = 6; 
+        6+4 = 10;
+        10+5= 15;
+        15+6= 21;
+
+        101*50
+
+        let sum = 0;
+        for(let i=0; i<arr.length; i++){
+            sum = sum + arr[i];
+            console.log('arr['+ i +'] : ', arr[i]);
+        }
+        console.log(sum)
+
+        let sum1=0;
+        for (let a = 1; a <= 100; a++) {
+            sum1 = sum+a;
+                 
+        }
+        console.log(sum); 
+        */
+
+        let sum1 = 0;
+        for (let a = 1; a <= 100; a++) {
+            sum1 = sum1 + a;
+        }
+        console.log(sum1);
+
+
+
+        //4번 1~100까지 짝수의 합계 구하기
+        /*
+        2+4 = 6
+        6+6 = 12
+        12+8 = 
+
+        for (let b=2; b<=100; b+=2){
+            console.log(b);
+        }
+
+        
+        */
+
+
+        let sum2 = 0;
+        for (let b = 0; b <= 100; b += 2) {
+            sum2 = sum2 + b
+        }
+        console.log(sum2);
+
+
+
+        /* 5번 구구단 2~3단씩 출력
+        2x1=2 3x1=3
+        2x2=4 3x2=6
+        4x1=4 5x1=5
+        4x2=8 5x2=10
+
+        for (let c=1; c<=2; c++){
+            console.log("2 x "+c+" = "+2*c, "3 x "+c+" = "+3*c);        
+
+
+        }
+        */
+
+
+        for (let d = 2; d <= 8; d += 2) {
+            for (let c = 1; c <= 2; c++) {
+                console.log(d + " x " + c + " = " + (d * c), (d + 1) + " x " + c + " = " + ((d + 1) * c));
+            }
+        }
+
+        /*
+        [3, 4, 7, 5, 1]
+        6. 숫자 배열이 있을 때 최대값 구하기(단,sort 쓰지말고)
+
+        */
+
+        let arr3 = [];
+        arr3 = [3, 4, 7, 5, 1];
+
+        let max1 = Math.max(3, 4, 7, 5, 1);
+        console.log(max1);
+
+        let max2 = Math.max(...arr3);
+        console.log(max2);
+
+        /*
+        7. 두번째 최대값 구하기
+        */
+
+
+        /*
+        8. 내림차순 정렬
+        */
+
+
+
+        /*
+        9. 예약
+        자리가 10개 있는 소극장 예약 시스템을 만들건데
+        1~10번 자리까지 있음
+        예약 가능하면 "예약했습니다"
+        예약 불가능하면 "이미 예약 되어있습니다"
+        첫번째 사용자가 2번 자리를 예약
+        두번째 사용자가 2번 자리를 예약
+        남은 자리를 출력        
+        */
+       function fn_sub(){
+        
+       }
+         
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <input type="checkbox" value="checkbox" id="">1번
+    <input type="checkbox" value="checkbox">2번
+    <input type="checkbox" value="checkbox">3번
+    <input type="checkbox" value="checkbox">4번
+    <input type="checkbox" value="checkbox">5번
+    <br>
+    <input type="checkbox" value="checkbox">6번
+    <input type="checkbox" value="checkbox">7번
+    <input type="checkbox" value="checkbox">8번
+    <input type="checkbox" value="checkbox">9번
+    <input type="checkbox" value="checkbox">10번
+    <br>
+    <input type="submit" onclick="fn_sub()">저장
+
+</body>
+
+</html>

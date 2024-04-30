@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.emp">
+
+	<resultMap id="empResult" type="empDTO" autoMapping="false">
+		<result property="empno" column="empno" />
+		<result property="ename" column="name" />
+	</resultMap>
+
+	<!-- select문 -->
+<!-- 	<select id="selectAllEmpList" resultType="com.spring.ex01.EmpDTO"> -->
+	<select id="selectAllEmpList" resultType="empDTO">
+		/*이 안에는 sql문이기 때문에 주석을 이렇게 달아야 한다*/
+		/* mapper.emp.selectAllEmpList*/
+		<![CDATA[
+		select * from emp3
+		]]>
+	</select>
+	<select id="selectEname" resultType="String">
+		SELECT
+			ename
+		FROM
+			emp
+		WHERE
+			empno = 7788
+	</select>
+	
+<!--     java.util.HashMap : hashmap -->
+<!--     java.util.Map : Map -->
+<!--     java.util.List : list -->
+    <select id="selectEmpMap" resultType="hashmap">
+        SELECT * FROM emp WHERE empno = 7788
+    </select>
+    
+    
+    <select id="empResult" resultMap="empResult">
+    	SELECT
+    		empno, ename as name, sal
+    	FROM
+    		emp
+    	WHERE
+			empno = 7788
+    </select>    
+    
+    <select id="selectEmpByEmpno" resultType="empDTO" parameterType="string">
+    	select * from emp
+    	where empno = #{_parameter}
+    </select>
+</mapper>

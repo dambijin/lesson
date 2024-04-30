@@ -1,0 +1,10 @@
+D:\lesson\worksapce_cs\WinFormTest1\bin\Debug\WinFormTest1.exe.config
+D:\lesson\worksapce_cs\WinFormTest1\bin\Debug\WinFormTest1.exe
+D:\lesson\worksapce_cs\WinFormTest1\bin\Debug\WinFormTest1.pdb
+D:\lesson\worksapce_cs\WinFormTest1\obj\Debug\WinFormTest1.csproj.AssemblyReference.cache
+D:\lesson\worksapce_cs\WinFormTest1\obj\Debug\WinFormTest1.Properties.Resources.resources
+D:\lesson\worksapce_cs\WinFormTest1\obj\Debug\WinFormTest1.csproj.GenerateResource.cache
+D:\lesson\worksapce_cs\WinFormTest1\obj\Debug\WinFormTest1.csproj.CoreCompileInputs.cache
+D:\lesson\worksapce_cs\WinFormTest1\obj\Debug\WinFormTest1.exe
+D:\lesson\worksapce_cs\WinFormTest1\obj\Debug\WinFormTest1.pdb
+D:\lesson\worksapce_cs\WinFormTest1\obj\Debug\WinFormTest1.Form1.resources

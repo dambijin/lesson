@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            height:1000px;
+            background-attachment:fixed;
+            background-image:url("https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js");
+            background-size:cover;
+        }
+        #image {
+            height: 200px;
+            border:1px solid red;
+            background-image: url("http://poiemaweb.com/img/bg/dot.png");
+            background-repeat: repeat-x;
+        }
+        #size{
+            height:200px;
+            width: 150px;
+            border:1px solid blue;
+            background-image:url("https://poiemaweb.com/img/bg/stock-photo-125979219.jpg");
+            /*background-size: 150px 50px;*/
+            background-repeat:no-repeat;
+            background-size:contain;
+            background-position:center;
+        }
+        #color{
+            height: 200px;
+            width: 150px;
+            background-color:blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="image"></div>
+    <div id="size"></div>
+    <div id="color"></div>
+</body>
+
+</html>

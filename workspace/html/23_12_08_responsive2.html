@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*폰트 출처:https://noonnu.cc/*/
+        @font-face {
+            font-family: 'omyu_pretty';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'omyu_pretty';
+        }
+
+        /*항상 브라우저 중앙에 위치*/
+        .wrapper {
+            border: 1px solid grey;
+            width: 70%;
+            min-width: 300px;
+            /*div를 가운데 정렬하는 법 
+            위아래 옆 모두 정렬을 원하면 margin:auto;
+            옆만 정렬을 원하면 margin:0 auto;
+            */
+            margin: 0 auto;
+
+        }
+
+        /*
+        class="wrapper" 이 클래스를 제외하고 다른 부분들에 무언가를 적용하고 싶을 때
+        div:not(.wrapper)
+        */
+        .header {
+            font-size: 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .header>div,
+        .header>nav {
+            border: 1px solid grey;
+            /*width가 정확히 반을 원한다면
+            원래 width:50%; 가능한 방법이지만 
+            border로 인해 1px값때문에 되지 않기 때문에 49%로 두는것이다.*/
+            width: 49%;
+            display: inline-block;
+            font-size: 20px;
+            /*margin:0 auto;  inline-block이어서 못씀/block만 적용됨*/
+            /*
+            #logo와 .menu의 padding값으로 인해 서로 겹침
+            고로 box-sizing이용
+            */
+            
+            box-sizing: border-box;
+            vertical-align: top;
+            min-width: 400px;
+
+        }
+
+        .header #logo {
+            text-align: left;
+            padding-left: 10px;
+            font-size: 40px;
+        }
+
+        .header .menu {
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        .header .menu ul {
+            padding-left: 0;
+            margin: 0;
+            color: grey;
+        }
+
+        .header .menu ul li {
+            /*li에 있는 점 표시 빼는거*/
+            list-style: none;
+            display: inline-block;
+            /*위아래 margin이 없어서 맨처음 0 양쪽 margin을 주기위해 5px*/
+            margin: 0 5px;
+
+        }
+
+        .header #menu_icon {
+            width: 30px;
+            min-width: 0;
+            height: 30px;
+            position: absolute;
+            top: 7px;
+            right: 10px;
+            display: none;
+        }
+
+        .header #menu_icon img {
+            width: 30px;
+            height: 30px;
+        }
+
+        @media (max-width:1158px) {
+            .header #logo {
+                text-align: center;
+            }
+
+            .header .menu {
+                text-align: center;
+            }
+
+        }
+
+        @media (max-width:850px) {
+            .header .menu ul {
+                display: none;
+            }
+
+            .header #menu_icon {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--전체-->
+    <div class="wrapper">
+        <!--상단헤더-->
+        <header class="header">
+            <!--로고-->
+            <div id="logo">
+                Dambi
+            </div>
+            <!--메뉴영역-->
+            <nav class="menu">
+                <ul>
+                    <li>Home</li>
+                    <li>News</li>
+                    <li>Contact</li>
+                    <li>About</li>
+                </ul>
+            </nav>
+            <div id="menu_icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/3388/3388788.png">
+            </div>
+        </header>
+        <!--상단헤더 끝-->
+    </div>
+</body>
+
+</html>

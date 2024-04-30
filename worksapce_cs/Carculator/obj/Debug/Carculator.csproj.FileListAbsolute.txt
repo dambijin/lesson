@@ -1,0 +1,10 @@
+D:\lesson\worksapce_cs\Carculator\bin\Debug\Carculator.exe.config
+D:\lesson\worksapce_cs\Carculator\bin\Debug\Carculator.exe
+D:\lesson\worksapce_cs\Carculator\bin\Debug\Carculator.pdb
+D:\lesson\worksapce_cs\Carculator\obj\Debug\Carculator.csproj.AssemblyReference.cache
+D:\lesson\worksapce_cs\Carculator\obj\Debug\Carculator.Form1.resources
+D:\lesson\worksapce_cs\Carculator\obj\Debug\Carculator.Properties.Resources.resources
+D:\lesson\worksapce_cs\Carculator\obj\Debug\Carculator.csproj.GenerateResource.cache
+D:\lesson\worksapce_cs\Carculator\obj\Debug\Carculator.csproj.CoreCompileInputs.cache
+D:\lesson\worksapce_cs\Carculator\obj\Debug\Carculator.exe
+D:\lesson\worksapce_cs\Carculator\obj\Debug\Carculator.pdb
